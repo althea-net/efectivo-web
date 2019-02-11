@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/efectivo-web/precache-manifest.a0a514ca44f957fbeecc70cf20378d05.js"
+  "/efectivo-web/precache-manifest.4ee848f4c64f3c02c1a0b5b16a599c86.js"
 );
 
 workbox.clientsClaim();
