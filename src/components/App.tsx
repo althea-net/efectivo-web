@@ -180,7 +180,7 @@ class App extends Component<Props> {
         />
         <Alert
           msg="txSuccess"
-          color="primary"
+          color="success"
           isOpen={store.state.txSuccessAlert}
           toggle={() => store.setState({ txSuccessAlert: false })}
         />
