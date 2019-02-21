@@ -182,9 +182,6 @@ class Send extends Component<Props, State> {
                             txSendingAlert: false,
                             txErrorAlert: true
                           });
-                          setTimeout(() => {
-                            context.setState({ txErrorAlert: false });
-                          }, 10000);
                         }
                         this.props.toggle();
                       }
