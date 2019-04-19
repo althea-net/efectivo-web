@@ -40,7 +40,7 @@ export function Screen(props: {
           left: 0,
           top: 0,
           width: "100vw",
-          height: "100vh",
+          height: "90vh",
           display: "flex",
           alignItems: "center",
           transform: "translateX(-100vw) translateY(20px)",

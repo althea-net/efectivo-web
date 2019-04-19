@@ -68,7 +68,7 @@ class App extends Component<Props> {
   render() {
     let { t, store } = this.props;
     return (
-      <div style={{ height: "100vh", display: "flex", alignItems: "center" }}>
+      <div style={{ height: "90vh", display: "flex", alignItems: "center" }}>
         <div
           style={{
             display: "flex",
