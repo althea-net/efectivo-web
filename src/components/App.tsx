@@ -94,9 +94,6 @@ class App extends Component<Props> {
             <h1 style={{ fontWeight: "normal" }}>{t("efectivo")}</h1>
             <div>
               <ButtonDropdown
-                style={{
-                  width: 159
-                }}
                 isOpen={this.state.languageDropdownOpen}
                 toggle={() =>
                   this.setState({
