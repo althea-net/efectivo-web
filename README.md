@@ -10,3 +10,5 @@ Communal wallets for testing:
   - private key: 0xb927a19aab0f98dfa7911f4ad160472fefde5318c0eb9a659f492f38bccf34af
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+To develop on it, do `npm install`, then `npm run start`.
