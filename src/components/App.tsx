@@ -50,18 +50,30 @@ class App extends Component<Props> {
     }
 
     if (xDaiBalance) {
-      return (
-        <div>
-          <h1 style={{ wordBreak: "normal" }}>
-            {"$" + formatToDollars(subtractTxnCost(xDaiBalance))}
-          </h1>
-          {i18n.language === "es" && usdcop
-            ? "($" +
-              convertToCOP(subtractTxnCost(xDaiBalance), usdcop) +
-              " COP)"
-            : ""}
-        </div>
-      );
+      if (i18n.language === "es" && usdcop) {
+        return (
+          <div>
+            <div>
+              <h2 style={{ display: "inline-block", wordBreak: "normal" }}>
+                {"$" + convertToCOP(subtractTxnCost(xDaiBalance), usdcop)}
+              </h2>
+              {" COP"}
+            </div>
+            <div style={{ textAlign: "right" }}>
+              {"$" + formatToDollars(subtractTxnCost(xDaiBalance))}
+              <small> USD</small>
+            </div>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            <h1 style={{ wordBreak: "normal" }}>
+              {"$" + formatToDollars(subtractTxnCost(xDaiBalance))}
+            </h1>
+          </div>
+        );
+      }
     }
   };
 
