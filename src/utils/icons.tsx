@@ -112,3 +112,8 @@ export function leftChevron(fill = "#fff", width = 24, height = 24) {
     </svg>
   );
 }
+
+export function dollarSign() {
+  // return "$"
+  return "◈";
+}

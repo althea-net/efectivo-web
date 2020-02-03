@@ -1,5 +1,5 @@
 import { Button, Modal, ModalBody, ModalHeader } from "reactstrap";
-import { upArrow, downArrow, rightArrow } from "../utils/icons";
+import { upArrow, downArrow, rightArrow, dollarSign } from "../utils/icons";
 import React, { Component } from "react";
 
 import daiImg from "../images/dai.jpg";

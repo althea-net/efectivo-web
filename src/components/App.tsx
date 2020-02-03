@@ -4,7 +4,7 @@ import Receive from "./Receive";
 import Save from "./Save";
 import Transactions from "./Transactions";
 import TransactionsScreen from "./TransactionsScreen";
-import { downArrow, rightArrow } from "../utils/icons";
+import { downArrow, rightArrow, dollarSign } from "../utils/icons";
 import {
   Button,
   ButtonDropdown,
@@ -56,12 +56,13 @@ class App extends Component<Props> {
           <div>
             <div>
               <h2 style={{ display: "inline-block", wordBreak: "normal" }}>
-                {"$" + convertToCOP(subtractTxnCost(xDaiBalance), usdcop)}
+                {dollarSign() +
+                  convertToCOP(subtractTxnCost(xDaiBalance), usdcop)}
               </h2>
               {" COP"}
             </div>
             <div style={{ textAlign: "right" }}>
-              {"$" + formatToDollars(subtractTxnCost(xDaiBalance))}
+              {dollarSign() + formatToDollars(subtractTxnCost(xDaiBalance))}
               <small> USD</small>
             </div>
           </div>
@@ -70,7 +71,7 @@ class App extends Component<Props> {
         return (
           <div>
             <h1 style={{ wordBreak: "normal" }}>
-              {"$" + formatToDollars(subtractTxnCost(xDaiBalance))}
+              {dollarSign() + formatToDollars(subtractTxnCost(xDaiBalance))}
             </h1>
           </div>
         );

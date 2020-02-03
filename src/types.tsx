@@ -1,4 +1,5 @@
 import { utils } from "ethers";
+import { dollarSign } from "./utils/icons";
 
 export interface Transaction {
   nonce: number;
@@ -20,13 +21,13 @@ export enum Currency {
 export function currencyToSymbol(currency: Currency) {
   switch (currency) {
     case Currency.DAI:
-      return "$";
+      return dollarSign();
       break;
     case Currency.ETH:
       return "ETH";
       break;
     case Currency.XDAI:
-      return "$";
+      return dollarSign();
       break;
     case Currency.COP:
       return "$";

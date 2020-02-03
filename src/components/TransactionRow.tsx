@@ -8,6 +8,7 @@ import es from "date-fns/locale/es";
 import en from "date-fns/locale/en";
 import { Transaction } from "../types";
 import { BigNumber } from "ethers/utils";
+import { dollarSign } from "../utils/icons";
 
 interface Props {
   tx: Transaction;
@@ -32,7 +33,7 @@ function TransactionRow(props: Props) {
         {tx.to.toLowerCase() === address.toLowerCase() ? (
           <>
             {t("received", {
-              amount: "$" + formatToDollars(tx.value) + " "
+              amount: dollarSign() + formatToDollars(tx.value) + " "
             })}
             {i18n.language === "es" && rate
               ? " ($" + convertToCOP(tx.value, rate) + " COP)"
@@ -44,7 +45,7 @@ function TransactionRow(props: Props) {
         ) : (
           <>
             {t("sent", {
-              amount: "$" + formatToDollars(tx.value) + " "
+              amount: dollarSign() + formatToDollars(tx.value) + " "
             })}
             {i18n.language === "es" && rate
               ? " ($" + convertToCOP(tx.value, rate) + " COP)"

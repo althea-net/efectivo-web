@@ -8,7 +8,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-import { qr, camera } from "../utils/icons";
+import { qr, camera, dollarSign } from "../utils/icons";
 import React, { Component } from "react";
 import { Currency, currencyToName, currencyToSymbol } from "../types";
 import QrReader from "./QrReader";
@@ -143,11 +143,12 @@ class Send extends Component<Props, State> {
                 </InputGroup>
                 {i18n.language === "es" && context.state.usdcop ? (
                   <div style={{ textAlign: "right" }}>
-                    ($
-                    {formatToDollars(
-                      convertFromCOP(this.state.amount, context.state.usdcop),
-                      false
-                    )}
+                    (
+                    {dollarSign() +
+                      formatToDollars(
+                        convertFromCOP(this.state.amount, context.state.usdcop),
+                        false
+                      )}
                     <small> USD</small>)
                   </div>
                 ) : (
