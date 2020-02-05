@@ -52,11 +52,14 @@ export class AppContainer extends Container<RootState> {
       privateKey = ethers.Wallet.createRandom().privateKey;
       localStorage.setItem("efectivoPrivateKey", privateKey);
     }
+
     const xDaiProvider = new ethers.providers.JsonRpcProvider(
-      "https://dai.poa.network"
+      "https://dai.althea.net"
+    );
+    const ethProvider = new ethers.providers.JsonRpcProvider(
+      "https://eth.althea.net"
     );
 
-    const ethProvider = ethers.getDefaultProvider();
     const xDaiWallet = new ethers.Wallet(privateKey, xDaiProvider);
     const ethWallet = new ethers.Wallet(privateKey, ethProvider);
     const daiContract = new ethers.Contract(DAI, ERC20Abi, ethProvider);
